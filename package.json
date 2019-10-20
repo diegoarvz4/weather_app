@@ -1,0 +1,27 @@
+{
+  "name": "weather_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "start:dev": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegoarvz4/weather_app.git"
+  },
+  "author": "diegoarvz4",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diegoarvz4/weather_app/issues"
+  },
+  "homepage": "https://github.com/diegoarvz4/weather_app#readme",
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2"
+  }
+}
