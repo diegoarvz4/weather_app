@@ -1,4 +1,7 @@
 
+import fromUnixTime from 'date-fns/fromUnixTime'
+import getUnixTime from 'date-fns/getUnixTime'
+
 document.getElementById('fetch-weather').addEventListener('click', (e) => {
   e.preventDefault();
   const city = document.getElementById('city-input').value.toLowerCase();
@@ -13,6 +16,35 @@ const  fetchData = async (city) =>{
   console.log(myJson);
   console.log("Difference with utc: ", (myJson.timezone / 3600));
   console.log(myJson.weather[0].main);
+ // console.log(Math.floor((new Date()).getTime() / 1000));
+  const sunrise = fromUnixTime(myJson.sys.sunrise ); // city sunrise
+  const sunset = fromUnixTime(myJson.sys.sunset); //city sunset
+   //get Time
+   const localTime = new Date();
+   const utcTime = localTime.toUTCString();
+   const utcTimeDate = new Date(utcTime.substring(0,utcTime.length-4));
+   const cityTime = fromUnixTime(utcTimeDate.getTime() / 1000 + myJson.timezone)
+  console.log(fromUnixTime(myJson.sys.sunset) > cityTime )
+  if ( cityTime < sunset){
+    setBackground('day');
+  } else {
+    setBackground('night');
+  }
+  setStats({cityTime});
+}
+
+const setBackground = (status) => {
+  console.log('here')
+  const bg = document.getElementById('container');
+  console.log(bg.classList);
+  bg.classList.remove('day');
+  bg.classList.remove('night');
+  bg.classList.add(`${status}`);
+}
+
+const setStats = (stats) => {
+  const statsContainer = document.getElementById('stats');
+  statsContainer.innerHTML = `<h1>${stats.cityTime}</h1>`;
 }
 
 const weather = ['Mist', 'Clear', 'Clouds', 'Drizzle'];
