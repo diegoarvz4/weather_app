@@ -1,16 +1,206 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background-color: #5E0035;
+}
+
 .container {
   height: 100vh;
+  font-family: 'Nanum Gothic', sans-serif;
 }
 
-.day {
-  background-image: url("../img/city_day.jpeg");
+.container form {
+  padding: 50px;
 }
 
-.night {
-  background-image: url("../img/city_night.jpg");
+.container form label {
+  font-weight: bold;
+  margin-right: 15px;
+  color: white;
 }
 
-#stats {
-  background-color: white;
+.container form input {
+  border: 1px solid lightgrey;
+  border-radius: 20px;
+  height: 10px;
+  width: 166px;
+  padding: 12px;
+}
+
+.container form input:focus {
+  border: 1px solid lightseagreen;
+  border-radius: 20px;
+}
+
+.stats {
+  width: 350px;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+.stats-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 50vh;
+}
+
+.stats-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.stats-header-city {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 30px;
+  padding-bottom: 15px;
+  width: 100%;
+}
+
+.stats-header-city img {
+  width: 40px;
+  margin-left: 40px;
+}
+
+.stats-header h4 {
+  font-size: 20px;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.stats-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.stats-body span {
+  font-size: 40px;
+}
+
+.stats-body img {
+  height: 100px;
+}
+
+.stats-other h5 {
+  font-size: 15px;
+  padding-bottom: 20px;
+}
+
+.lds-dual-ring {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 46px;
+  height: 46px;
+  margin: 1px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  -webkit-animation: lds-dual-ring 1.2s linear infinite;
+          animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@-webkit-keyframes lds-dual-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.set-hidden {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
