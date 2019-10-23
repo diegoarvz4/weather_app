@@ -34,6 +34,22 @@ const  fetchData = async (city) =>{
   const utcTimeDate = new Date(utcTime.substring(0,utcTime.length-4));
   const cityTime = new Date(fromUnixTime(utcTimeDate.getTime() / 1000 + myJson.timezone));
   setStats({cityTime, weather, weather_desc, temperature, humidity, time, name, weatherIconURL, wind, clouds, code });
+  document.getElementById('temp-toggle').addEventListener('click', () => {
+    const buttonToggle = document.getElementById('temp-toggle');
+    const text = buttonToggle.textContent;
+    if (text === '°F') {
+      const fahrenheit = (temperature * 9/5) + 32;
+      document.getElementById('temp-display').textContent = fahrenheit.toFixed(2) + ' °F';
+      buttonToggle.textContent = '°C';
+    } else {
+      document.getElementById('temp-display').textContent = temperature + ' °C';
+      buttonToggle.textContent = '°F';
+    }
+    document.getElementById('temp-display').classList.add('appear');
+    document.getElementById('temp-display').addEventListener("animationend", () => {
+      document.getElementById('temp-display').classList.remove('appear');
+    });
+  });
 }
 
 
@@ -48,8 +64,9 @@ const setStats = (stats) => {
                                 <h4 style="text-transform: capitalize;">${stats.weather_desc}</h4>
                               </div>
                               <div class="stats-body">
-                                <span>${stats.temperature} °C</span> 
-                                <img  src ="http://openweathermap.org/img/wn/${stats.weatherIconURL}@2x.png" />
+                                <span id="temp-display">${stats.temperature} °C</span> 
+                                <button id="temp-toggle">°F</button>
+                                <img src ="http://openweathermap.org/img/wn/${stats.weatherIconURL}@2x.png" />
                               </div>
                               <div class="stats-other">
                                 <h5>Humidity ${stats.humidity}%</h5>

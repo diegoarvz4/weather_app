@@ -53,11 +53,12 @@ table {
 }
 
 body {
-  background-color: #5E0035;
+  background-color: #2D728F;
 }
 
 .container {
   height: 100vh;
+  color: white;
   font-family: 'Nanum Gothic', sans-serif;
 }
 
@@ -151,9 +152,48 @@ body {
   height: 100px;
 }
 
+.stats-body button {
+  border: none;
+  padding: 10px;
+  background-color: #26547C;
+  border-radius: 5px;
+  margin-left: 23px;
+  color: white;
+  font-weight: bold;
+}
+
+.stats-body button:active {
+  background-color: #090446;
+}
+
 .stats-other h5 {
   font-size: 15px;
   padding-bottom: 20px;
+}
+
+.appear {
+  -webkit-animation-name: appear;
+          animation-name: appear;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+}
+
+@-webkit-keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .lds-dual-ring {
