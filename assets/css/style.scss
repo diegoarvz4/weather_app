@@ -48,12 +48,13 @@ table {
 }
 
 body{
-  background-color: #5E0035;
+  background-color: #2D728F;
 }
 
 
 .container{
   height: 100vh;
+  color: white;
   font-family: 'Nanum Gothic', sans-serif;
   form{
     padding: 50px;
@@ -117,6 +118,18 @@ body{
     img{
       height: 100px;
     }
+    button{
+      border: none;
+      padding: 10px;
+      background-color: #26547C;
+      border-radius: 5px;
+      margin-left: 23px;
+      color: white;
+      font-weight: bold;
+      &:active{
+        background-color: #090446;
+      }
+    }
   }
 
   &-other{
@@ -125,6 +138,16 @@ body{
       padding-bottom: 20px;
     }
   }
+}
+
+.appear{
+  animation-name: appear;
+  animation-duration: 0.8s;
+}
+
+@keyframes appear {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
 
