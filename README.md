@@ -2,10 +2,16 @@
 
 > This application is a weather service. It fetches the information from OpenWeather.com and displays it in a practical manner.
 
+## Screenshots
+
+![Weather App](https://diegoarvz.s3-us-west-1.amazonaws.com/weather_app_screenshot.png)
+
 ## Prerequisites
 
  - Web browser
  - Javascript
+ - Webpack
+ - SCSS
 
 ## Getting Started
 
@@ -15,7 +21,7 @@ To get a local copy up and running follow these simple example steps.
 
 Install Node modules with `npm i`
 
-Run in a local server running `npm run star:dev`
+Run in a local server running `npm run start:dev`
 
 Watch on localhost:9000
 
