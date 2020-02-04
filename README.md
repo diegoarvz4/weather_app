@@ -35,6 +35,9 @@ Watch on localhost:9000
  
  - Javascript
  - Fetch API
+ - Webpack
+ - SCSS
+ - ES6
  
 # Authors
 
