@@ -5,6 +5,7 @@
 ## Screenshots
 
 ![Weather App](https://diegoarvz.s3-us-west-1.amazonaws.com/weather_app_screenshot.png)
+![Screen 2](https://diegoarvz.s3-us-west-1.amazonaws.com/weather_app_screenshot2.png)
 
 ## Prerequisites
 
