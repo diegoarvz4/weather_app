@@ -1,6 +1,6 @@
 # JavaScript Open Weather API
 
-> This application is a weather service. It fetches the information from OpenWeather.com
+> This application is a weather service. It fetches the information from OpenWeather.com and displays it in a practical manner.
 
 ## Prerequisites
 
