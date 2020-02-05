@@ -4,7 +4,9 @@
 
 ## Screenshots
 
-![Weather App](https://diegoarvz.s3-us-west-1.amazonaws.com/weather_app_screenshot.png)
+![Day](https://diegoarvz.s3-us-west-1.amazonaws.com/weather_app_screenshot.png)
+![Sunset](https://diegoarvz.s3-us-west-1.amazonaws.com/weather_app_screenshot3.png)
+![Night](https://diegoarvz.s3-us-west-1.amazonaws.com/weather_app_screenshot2.png)
 
 ## Prerequisites
 
@@ -33,6 +35,9 @@ Watch on localhost:9000
  
  - Javascript
  - Fetch API
+ - Webpack
+ - SCSS
+ - ES6
  
 # Authors
 
