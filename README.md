@@ -1,6 +1,6 @@
 # JavaScript Open Weather API
 
-> This application is a weather service. It fetches the information from OpenWeather.com and displays it in a practical manner.
+This web app gives the weather forecast for almost any city in the world. The data is fetched from OpenWeatherMap.com. This project was built with vanilla JavaScript.
 
 ## Screenshots
 
